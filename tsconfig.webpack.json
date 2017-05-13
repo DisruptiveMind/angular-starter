@@ -21,7 +21,19 @@
     "types": [
       "hammerjs",
       "node"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@app/*": ["src/app/*"],
+      "@directives/*": ["src/app/directives/*"],
+      "@pipes/*": ["src/app/pipes/*"],
+      "@providers/*": ["src/app/providers/*"],
+      "@components/*": ["src/app/components/*"],
+      "@models/*": ["src/app/models/*"],
+      "@pages/*": ["src/app/pages/*"]
+    }
   },
   "exclude": [
     "node_modules",

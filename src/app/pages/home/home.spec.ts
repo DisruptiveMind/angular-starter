@@ -16,20 +16,20 @@ import { MockBackend } from '@angular/http/testing';
 /**
  * Load the implementations that should be tested.
  */
-import { AppState } from '../app.service';
-import { HomeComponent } from './home.component';
-import { Title } from './title';
+import { AppState } from '@app/app.service';
+import { HomePage } from '@pages/home/home';
+import { TitleService } from '@providers/title/title';
 
 describe(`Home`, () => {
-  let comp: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+  let comp: HomePage;
+  let fixture: ComponentFixture<HomePage>;
 
   /**
    * async beforeEach.
    */
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent],
+      declarations: [HomePage],
       schemas: [NO_ERRORS_SCHEMA],
       providers: [
         BaseRequestOptions,
@@ -42,7 +42,7 @@ describe(`Home`, () => {
           deps: [MockBackend, BaseRequestOptions]
         },
         AppState,
-        Title,
+        TitleService,
       ]
     })
     /**
@@ -55,7 +55,7 @@ describe(`Home`, () => {
    * Synchronous beforeEach.
    */
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(HomePage);
     comp = fixture.componentInstance;
 
     /**

@@ -9,9 +9,9 @@ import {
   Http
 } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
-import { Title } from './title.service';
+import { TitleService } from '@providers/title';
 
-describe('Title', () => {
+describe('TitleService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
       BaseRequestOptions,
@@ -23,14 +23,14 @@ describe('Title', () => {
         },
         deps: [MockBackend, BaseRequestOptions]
       },
-      Title
+      TitleService
     ]}));
 
-  it('should have http', inject([ Title ], (title: Title) => {
+  it('should have http', inject([ TitleService ], (title: TitleService) => {
     expect(!!title.http).toEqual(true);
   }));
 
-  it('should get data from the server', inject([ Title ], (title: Title) => {
+  it('should get data from the server', inject([ TitleService ], (title: TitleService) => {
     spyOn(console, 'log');
     expect(console.log).not.toHaveBeenCalled();
 

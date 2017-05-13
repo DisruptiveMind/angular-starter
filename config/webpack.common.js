@@ -85,7 +85,17 @@ module.exports = function (options) {
        * An array of directory names to be resolved to the current directory
        */
       modules: [helpers.root('src'), helpers.root('node_modules')],
-
+      alias: {
+        "@": helpers.root('src'),
+        "@assets": helpers.root('src') + '/assets',
+        "@app": helpers.root('src') + "/app",
+        "@directives": helpers.root('src') + "/app/directives",
+        "@pipes": helpers.root('src') + "/app/pipes",
+        "@providers": helpers.root('src') + "/app/providers",
+        "@components": helpers.root('src') + "/app/components",
+        "@models": helpers.root('src') + "/app/models",
+        "@pages": helpers.root('src') + "/app/pages"
+      }
     },
 
     /**

@@ -12,7 +12,7 @@ import { MockBackend } from '@angular/http/testing';
 /**
  * Load the implementations that should be tested.
  */
-import { XLargeDirective } from './x-large.directive';
+import { XLargeDirective } from '@directives/x-large/x-large';
 
 describe('x-large directive', () => {
   /**

@@ -5,7 +5,7 @@ import {
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'about',
+  selector: 'about-page',
   styles: [`
   `],
   template: `
@@ -22,7 +22,7 @@ import { ActivatedRoute } from '@angular/router';
     <pre>this.localState = {{ localState | json }}</pre>
   `
 })
-export class AboutComponent implements OnInit {
+export class AboutPage implements OnInit {
 
   public localState: any;
   constructor(
@@ -56,7 +56,7 @@ export class AboutComponent implements OnInit {
      */
     setTimeout(() => {
 
-      System.import('../../assets/mock-data/mock-data.json')
+      System.import('../../../assets/mock-data/mock-data.json')
         .then((json) => {
           console.log('async mockData', json);
           this.localState = json;
