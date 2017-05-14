@@ -1,6 +1,7 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  ViewEncapsulation
 } from '@angular/core';
 
 import { AppState } from '@app/app.service';
@@ -13,7 +14,7 @@ import { XLargeDirective } from '@directives/x-large';
    * for `document.querySelectorAll(selector)` in our index.html
    * where, in this case, selector is the string 'home'.
    */
-  selector: 'home',  // <home></home>
+  selector: '[home-page]',
   /**
    * We need to tell Angular's Dependency Injection which providers are in our app.
    */
@@ -21,13 +22,10 @@ import { XLargeDirective } from '@directives/x-large';
     TitleService
   ],
   /**
-   * Our list of styles in our component. We may add more to compose many styles together.
-   */
-  styleUrls: [ './home.css' ],
-  /**
    * Every Angular template is first compiled by the browser before Angular runs it's compiler.
    */
-  templateUrl: './home.html'
+  templateUrl: './home.html',
+  encapsulation: ViewEncapsulation.None
 })
 export class HomePage implements OnInit {
   /**

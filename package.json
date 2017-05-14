@@ -70,7 +70,7 @@
     "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js"
   },
   "dependencies": {
-    "@angular/animations": "~4.0.3",
+    "@angular/animations": "^4.0.3",
     "@angular/common": "~4.0.3",
     "@angular/compiler": "~4.0.3",
     "@angular/core": "~4.0.3",
@@ -83,9 +83,15 @@
     "@angularclass/conventions-loader": "^1.0.13",
     "@angularclass/hmr": "~1.2.2",
     "@angularclass/hmr-loader": "~3.0.2",
+    "@webcomponents/custom-elements": "^1.0.0-alpha.3",
+    "bootstrap": "^4.0.0-alpha.6",
+    "clarity-angular": "^0.9.4-patch",
+    "clarity-icons": "^0.9.4-patch",
+    "clarity-ui": "^0.9.4-patch",
     "core-js": "^2.4.1",
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",
+    "mutationobserver-shim": "^0.3.2",
     "reflect-metadata": "^0.1.10",
     "rxjs": "5.0.2",
     "zone.js": "~0.8.5"

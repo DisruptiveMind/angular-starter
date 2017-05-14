@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {
@@ -24,11 +25,17 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-
+import { ClarityModule } from "clarity-angular";
 import { APP_PAGES_GROUP } from '@pages';
+import { APP_COMPONENTS_GROUP } from '@components'
 
-import '../styles/styles.scss';
-import '../styles/headings.css';
+import 'clarity-icons';
+import '../styles/app.scss';
+// import 'clarity-icons/';
+import 'clarity-icons/shapes/basic-shapes';
+import 'clarity-icons/shapes/core-shapes';
+import 'clarity-icons/shapes/technology-shapes';
+
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -49,16 +56,19 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    ...APP_PAGES_GROUP
+    ...APP_PAGES_GROUP,
+    ...APP_COMPONENTS_GROUP
   ],
   /**
    * Import Angular's modules.
    */
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    ClarityModule.forRoot()
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.
