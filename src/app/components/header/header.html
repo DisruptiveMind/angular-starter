@@ -1,12 +1,19 @@
-<clr-header>
+<clr-header class="header">
     <div class="branding">
         <a class="nav-link" href="javascript://">
             <span class="title">Starter</span>
         </a>
     </div>
     <div class="header-nav" [clr-nav-level]="1">
-        <a href="javascript://" class="active nav-link nav-text">Dashboard</a>
-        <a href="javascript://" class="nav-link nav-text">Interactive Analytics</a>
+        <a class="active nav-link">
+            <span class="nav-text">Dashboard</span>
+        </a>
+        <a class="nav-link">
+            <span class="nav-text">Interactive Analytics</span>
+        </a>
+        <a class="nav-link">
+            <span class="nav-text">Interactive Analytics</span>
+        </a>
     </div>
     <div class="header-actions">
         <clr-dropdown clrMenuPosition="bottom-right">
@@ -14,7 +21,7 @@
                 <clr-icon shape="user" class="has-badge" size="36"></clr-icon>
                 <clr-icon shape="caret down"></clr-icon>
             </button>
-            
+
             <clr-dropdown-menu>
                 <a href="..." clrDropdownItem>About</a>
                 <a href="..." clrDropdownItem>Preferences</a>

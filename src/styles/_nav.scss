@@ -1,0 +1,12 @@
+header,
+.header {
+    .header-nav {
+        .nav-link {
+            &:first-of-type::before,
+            &:last-of-type::after {
+                content: none;
+            }
+        }
+    }
+}
+

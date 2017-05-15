@@ -2,9 +2,11 @@
 /* This file is for setting global styles  */
 @import
         'variables'
-    ,   'base'
-
+        
     // Vendors
     ,   './node_modules/clarity-ui/src/main'
     ,   './node_modules/clarity-icons/src/clarity-icons'
+
+    ,   'base'
+    ,   'nav'
     ;
